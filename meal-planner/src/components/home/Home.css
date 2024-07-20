@@ -1,0 +1,77 @@
+
+.recipes-holder{
+   
+    margin-top: 2rem;
+    padding: 1rem;
+    
+    justify-self: center;
+    top: center;
+    justify-items: center;
+    
+
+}
+.recipeHolder{
+    height: 30rem;
+    width: 20rem;
+    
+    overflow: hidden;
+    
+   
+    justify-content: center;
+    align-items: center;
+    display:inline-block;
+    margin: .5rem;
+    border-radius: 10px;
+    background-color: bisque;
+   
+}
+.recipeHolder:hover{
+    height: 31rem;
+    width: 21rem;
+    margin: .25rem;
+
+    
+    border: 2px solid;
+    color:rgb(241, 238, 47);
+    
+}
+.image{    
+    height: 100%;
+    z-index: 1;
+    position: relative;
+    padding: 0;
+    margin-bottom: -5rem;
+    margin-left: -2rem;
+    
+}
+.infoHolder{
+    display: block;
+    height: 50%;
+    color: rgb(251, 244, 234);
+    width: 100%;
+    background-color: rgba(16, 16, 16, 0.94);
+    position: relative;
+    float: left;
+    padding: .25rem;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-weight: 900;
+    z-index: 200;
+}
+
+@media (max-width: 800px){
+    .infoHolder{
+        font-size: 1rem;
+    }
+    .recipeHolder{
+        height: 15rem;
+        width: 10rem;
+    }
+    .recipeHolder:hover{
+        height: 15.5rem;
+        width: 10.5rem;
+    }
+    .recipes-holder{
+        padding: 0;
+    }
+}
