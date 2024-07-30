@@ -7,6 +7,8 @@ import {useState, useEffect} from "react"
 import Login from "./components/login/Login"
 import Holder from './components/holder/Holder'
 import Register from"./components/login/Register"
+import Calender from"./components/calender/Calender"
+import Add from"./components/add/Add"
 function App() {
   const [recipes, setRecipes]= useState();
   const [User, setUser]=useState();
@@ -38,6 +40,10 @@ function App() {
     <Route path ='singleRecipe/:recipeId' element={<Holder />}/>
     <Route path ='/login'  element={<Login/>} />
     <Route path ='/register'  element={<Register/>} />
+    <Route path ='/calender'  element={<Calender/>} />
+    <Route path ='add/:recipeId'  element={<Add/>} />
+
+
 
 
     

@@ -1,14 +1,17 @@
 import "./Holder.css"
 import { useParams } from "react-router-dom";
 import api from "../../api/axiosConfig"
-
+import { Link } from "react-router-dom";
 import React from 'react'
-import {useState, useEffect} from "react"
+import {useState, useEffect,useContext} from "react"
 import { Button } from "react-bootstrap";
+import AuthContext from "../../context/AuthProvider";
+
+
 
 const Holder = () => {
     const [recipe, setRecipe]= useState();
-
+    const {isLoggedIn}=useContext(AuthContext);
 
     let params=useParams();
     const key=params.recipeId;
@@ -23,7 +26,7 @@ const Holder = () => {
           console.error(err)
         }}
         const getNutrients=((nutrients)=>{
-           if(nutrients!=null){
+           if(nutrients!=null&&nutrients.kcal!=null){
             return(<div className="holdNutr">
                 Cal: {nutrients.kcal}<br/>
                 Fat: {nutrients.fat} <br/>
@@ -48,6 +51,8 @@ const Holder = () => {
         <div key={recipe&&recipe.id} className="container">
             <div className="name">
                     {recipe&&recipe.name}
+                    {isLoggedIn?<Link to={`/add/${key}`}>Add</Link>: null}
+
                 </div>
                 <div className="about">
                 <div >

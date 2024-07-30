@@ -1,4 +1,8 @@
 .navbar{
     background: linear-gradient(to left top,#212054, #292797);
-    
+    position:sticky;
+}
+.user{
+    margin-right: 1rem;
+    text-transform: capitalize;
 }

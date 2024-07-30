@@ -62,7 +62,7 @@ const Register = () => {
     useEffect(()=>{
         setErrMsg("");
 
-    },[user,pwd,pwdMatch]);
+    },[user,eml,pwd,pwdMatch]);
 
     const handleSubmit=async (e)=>{
         e.preventDefault();
@@ -81,7 +81,6 @@ const Register = () => {
             }
         )
 
-            console.log(response.data)
             setSuccess(true);
         }catch(error){
            setErrMsg("Username or Password Taken")
@@ -144,7 +143,7 @@ const Register = () => {
                 onFocus={()=> setUserFocus(true)}
                 onBlur={()=> setUserFocus(false)}
                 /><p id="uidnote" className={userFocus&& user && !validName? "instructions": "offscreen"}>
-                <FontAwesomeIcon classname="info" icon={faInfoCircle}/> 
+                <FontAwesomeIcon className="info" icon={faInfoCircle}/> 
                 4 to 24 charachters.<br/>
                 Letters , numbers , underscores , hyphens allowed.
             </p>
@@ -172,7 +171,7 @@ const Register = () => {
                 onBlur={()=> setEmlFocus(false)}
                 />
                     <p id="emlnote" className={emlFocus&& eml && !validEml? "instructions": "offscreen"}>
-                    <FontAwesomeIcon classname="info" icon={faInfoCircle}/>                     Must be a valid email address
+                    <FontAwesomeIcon className="info" icon={faInfoCircle}/>                     Must be a valid email address
                     
                 </p>
             <label htmlFor="password">Password:
@@ -194,7 +193,7 @@ const Register = () => {
                 onFocus={()=> setPwdFocus(true)}
                 onBlur={()=> setPwdFocus(false)}
                 /><p id="pwdnote" className={pwdFocus&& pwd && !validPwd? "instructions": "offscreen"}>
-                <FontAwesomeIcon classname="info" icon={faInfoCircle}/> 
+                <FontAwesomeIcon className="info" icon={faInfoCircle}/> 
                 8 to 24 charachters.<br/>
                 Must include uppercase and lowercase letters, a number and a 
                 special character.<br/>
@@ -223,7 +222,7 @@ const Register = () => {
                 onFocus={()=> setPwdConfirmFocus(true)}
                 onBlur={()=> setPwdConfirmFocus(false)}
                 /><p id="pwdMatchnote" className={pwdConfirmFocus&& pwdMatch && !pwdConfirm? "instructions": "offscreen"}>
-                <FontAwesomeIcon classname="info" icon={faInfoCircle}/>   8 to 24 charachters.<br/>
+                <FontAwesomeIcon className="info" icon={faInfoCircle}/>   8 to 24 charachters.<br/>
                 Must include uppercase and lowercase letters, a number and a 
                 special character.<br/>
                 Allowed charachters: <span aria-label="exlclamation mark">!</span>

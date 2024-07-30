@@ -12,6 +12,9 @@ section{
     color:rgb(227, 227, 227)
     
 }
+section.login{
+    height:22rem;
+}
 .offscreen{
     position: absolute;
     left: -9999px;
@@ -58,6 +61,9 @@ input{
     padding: 10px;
     border-radius: 3px;
     background-color: rgb(29, 27, 27);
+}
+.info{
+    margin-right: 5px;
 }
 
    

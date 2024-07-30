@@ -1,0 +1,24 @@
+center{
+    margin: 10rem ;
+    display: inline ;
+}
+
+.day{
+    height: 10rem;
+    width: 20rem;
+    margin: 1rem;
+    padding: 1rem;
+    justify-content: bottom;
+    cursor: pointer;
+        
+
+}
+.day:hover{
+    background: linear-gradient(to left top,#212054, #292797);
+}
+h3{
+    border:none;
+    text-transform: none;
+    height: 50%;
+    
+}
