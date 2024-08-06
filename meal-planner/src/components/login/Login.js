@@ -43,7 +43,6 @@ const handleSubmit = async(e) => {
         },
       }
     );
-    const accesToken= response?.data?.accessToken;
     setAuth(user);
     setIsLoggedIn(true);
     setUser("")

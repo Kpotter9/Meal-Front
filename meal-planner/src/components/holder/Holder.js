@@ -28,14 +28,7 @@ const Holder = () => {
         const getNutrients=((nutrients)=>{
            if(nutrients!=null&&nutrients.kcal!=null){
             return(<div className="holdNutr">
-                Cal: {nutrients.kcal}<br/>
-                Fat: {nutrients.fat} <br/>
-                Saturates: {nutrients.saturates} <br/>
-                Carbs: {nutrients.carbs} <br/>
-                Surgar: {nutrients.sugars} <br/>
-                Fiber: {nutrients.fibre} <br/>
-                Protein: {nutrients.protein} <br/>
-                Salt: {nutrients.salt}<br/>
+                Cal: {nutrients.kcal} Fat: {nutrients.fat} Saturates: {nutrients.saturates} Carbs: {nutrients.carbs} Surgar: {nutrients.sugars} Fiber: {nutrients.fibre} Protein: {nutrients.protein} Salt: {nutrients.salt}<br/>
                 </div>)
            }
         
@@ -46,12 +39,14 @@ const Holder = () => {
       useEffect(() => {
         getRecipe()
       }, [])
-  return (
-    
+  return (<center>                                {isLoggedIn?<Link className="Add_Button" to={`/add/${key}`}>ADD</Link>: null}
+
+<button className="info_button" variant="primary" size="lg" href={recipe&&recipe.url} target="_blank">More Info</button>
+
         <div key={recipe&&recipe.id} className="container">
+
             <div className="name">
                     {recipe&&recipe.name}
-                    {isLoggedIn?<Link to={`/add/${key}`}>Add</Link>: null}
 
                 </div>
                 <div className="about">
@@ -65,30 +60,31 @@ const Holder = () => {
                 </div>
                 
             <div className="imageHolder">
+                <center>
             <img className="pic"src={recipe&&recipe.image} alt="null" />
+            
             <div className="discription">
                 {recipe&&recipe.description}
-               <div className="nutrients">
-                {getNutrients(recipe&&recipe.nutrients)}
-               </div>
+               
                
                 </div>
-                <div className="link"> 
-                    <Button  variant="primary" size="lg" href={recipe&&recipe.url} target="_blank">More Info</Button>
-                </div>
+                </center>
             </div>
+            
+               
             
                 
             
                 <div className="recipe">
                     <div className="ingredient">
                 {recipe&&recipe.ingredients.map((ingredient)=>
-                    <li>{ingredient}</li>
+                    <p>{ingredient}</p>
             ) }
                </div>
                 <div className="steps">
-                {recipe&&recipe.steps.map((step)=>
-                    <li>{step}</li>
+                {recipe&&recipe.steps.map((step,index)=>
+
+                    <p>Step{index+1}:<br/> {step}</p>
             ) }
                 </div>
                 </div>
@@ -98,9 +94,9 @@ const Holder = () => {
                 
                 
 
-
-
+                {getNutrients(recipe&&recipe.nutrients)}
         </div>
+        </center>
   )
 }
 

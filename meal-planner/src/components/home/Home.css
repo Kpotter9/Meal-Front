@@ -1,7 +1,7 @@
 
 .recipes-holder{
    
-    margin-top: 2rem;
+    margin-top: .5rem;
     padding: 1rem;
     
     justify-self: center;
@@ -56,6 +56,9 @@
     font-size: 1.5rem;
     text-transform: capitalize;
     z-index: 200;
+}
+.search-input{
+    width: 80%;
 }
 
 @media (max-width: 800px){

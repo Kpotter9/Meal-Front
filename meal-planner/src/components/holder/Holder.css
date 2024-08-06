@@ -22,7 +22,7 @@ max-width: 500px;
 
 }
 .pic{
-width: 40rem;
+width: 50vw;
 object-fit: fill;
 
 }
@@ -37,30 +37,43 @@ display: inline;
 text-transform: capitalize;
 
 }
+
+.holdNutr{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: .9rem;
+    font-weight: lighter;
+    text-align: center;
+    align-items: center;
+    justify-self: center ;
+    max-width: 500px;
+    margin-top: 2rem;
+}
+
 .discription{
-    padding-left: 5rem;
-    height: 5rem;
-    width: 20rem;
+    
     margin-top: 1rem;
     font-size: .9rem;
     font-style: italic;
    justify-content: space-evenly;
+   margin-bottom: 1rem;
   
 
 }
-.nutrients{
-margin-top: 1rem;
-    
-}
+
 .imageHolder{
     display:flex;
     margin-bottom: 2rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
     
 }
 
 .recipe{
     display: flex;
     justify-content: space-evenly;
+    flex-direction: column;
 }
 
 
@@ -76,7 +89,44 @@ margin-top: 1rem;
 
 }
 
-.Add{
-    margin-left: 10px;
+.Add_Button{
+    text-decoration: none;
+    position: sticky;
+    float: right;
+    margin: 1rem;
+    top:2rem;
+    right:5vw;
+    background-color: #2568b0;
+    color: black;
+    padding: 1rem;
+    font-size: larger;
+    border-radius: 2rem;
+    outline: auto;
+
+font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+;}
+
+
+.Add_Button:hover{
+background-color: #174475;
+}
+.info_button{
+     text-decoration: none;
+    position: sticky;
+    float: right;
+    margin: 1rem;
+    top:2rem;
+    right:15vw;
+    background-color: #2568b0;
+    color: black;
+    padding: 1rem;
+    font-size: larger;
+    border-radius: 2rem;
+    outline: auto;
+
+font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
 
+.info_button:hover{
+background-color: #174475;
+}

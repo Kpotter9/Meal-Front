@@ -1,0 +1,27 @@
+.main-info-container{
+    display: flex;
+    line-height: 2rem;
+
+    }
+.left{
+    display: table-cell;
+    display:flex;
+    flex-direction: column;
+   justify-self: left;
+   width: 50%;
+    padding: 1rem;
+}    
+.right{
+    display: table-cell;
+    justify-self: right;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 1rem;
+
+}
+.listItems{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}

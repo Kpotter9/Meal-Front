@@ -1,19 +1,21 @@
 section{
     height: 35rem;
-    width: 32rem;
+    width: 80%;
     background: linear-gradient(to left top,#212054, #292797);;
     display: flex;
     flex-direction: column;
     border-style:ridge solid;
     border-color: black;
-    margin: 5rem;
-    padding: 1rem;
+    margin-top: 5rem;
+    padding-top: 1rem;
     text-align: center;
     color:rgb(227, 227, 227)
     
 }
 section.login{
     height:22rem;
+    width: 80%;
+    
 }
 .offscreen{
     position: absolute;

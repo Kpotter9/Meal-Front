@@ -19,10 +19,14 @@ const Header = () => {
                  navbarScroll> 
 
                 <NavLink className="nav-link" to="/">Home</NavLink>
-                  
-                <NavLink  className="nav-link" to="/calender">Week
+                
+                {isLoggedIn? <><NavLink  className="nav-link" to="/calender">Week
+                </NavLink><NavLink  className="nav-link" to="/makeRecipe">Add
                 </NavLink>
-
+                <NavLink  className="nav-link" to="/shoppinglist">Shopping List
+                </NavLink>
+                </>:null}
+                  
 
             </Nav>
             {isLoggedIn? <div className="user"><NavLink  className="nav-link" to="/User">

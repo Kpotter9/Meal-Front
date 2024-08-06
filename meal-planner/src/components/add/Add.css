@@ -1,24 +1,58 @@
-center{
-    margin: 10rem ;
-    display: inline ;
+.add_cal{
+    padding-top: 3rem;
+    width: 80vw;
+    margin-top: 5rem;
+    justify-content: center;
+    line-height: 0;
+
+
 }
 
-.day{
+.add_day{
+    display: inline-block;
+    border: solid 1px ;
     height: 10rem;
     width: 20rem;
-    margin: 1rem;
-    padding: 1rem;
-    justify-content: bottom;
+    margin-top: 1rem;
+    padding-top: 1rem;
     cursor: pointer;
-        
-
+    text-align: center;
+    
 }
-.day:hover{
+.add_day:hover{
     background: linear-gradient(to left top,#212054, #292797);
 }
-h3{
+.add_week{
     border:none;
-    text-transform: none;
-    height: 50%;
     
+    
+    
+}
+.date{
+    text-align: center;
+    padding-top: 3rem;
+
+}
+
+@media (max-width:750px){
+    .add_day{
+        height: 8rem;
+        width: 8rem;
+        margin: 0;
+    }
+    .add_cal{
+        padding: 0;
+        margin: 0;
+        padding-top: 5rem;
+    }
+    .date{
+        padding-top: 2rem;
+    
+    }
+    .add_week{
+        font-size: 1.2rem;
+        
+        
+    }
+
 }
