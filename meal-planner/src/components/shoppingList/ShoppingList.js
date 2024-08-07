@@ -39,6 +39,7 @@ const ShoppingList = () => {
         try{
             const response = await api.get(`/api/user/getlist/${auth}`);
             setList(response.data);
+             console.log(response)
         }catch(err){
             console.error(err);
         }
@@ -57,7 +58,7 @@ const ShoppingList = () => {
         
         {
                
-               list.map((item,index)=> {
+               list&&list.map((item,index)=> {
                 return(
                     <button className="item" ref={currRef} onClick={()=>removeItem(item.id,index)} key={item.id}>{item.item}</button>
                 )

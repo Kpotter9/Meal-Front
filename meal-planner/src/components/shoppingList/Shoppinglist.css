@@ -28,3 +28,8 @@ outline: auto;
     box-shadow: none;
     cursor: pointer;
 }
+@media (max-width: 750px){
+    .item:hover{
+        background-color: whitesmoke;
+    }
+}

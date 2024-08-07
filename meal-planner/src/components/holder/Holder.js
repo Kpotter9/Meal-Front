@@ -41,7 +41,7 @@ const Holder = () => {
       }, [])
   return (<center>                                {isLoggedIn?<Link className="Add_Button" to={`/add/${key}`}>ADD</Link>: null}
 
-<button className="info_button" variant="primary" size="lg" href={recipe&&recipe.url} target="_blank">More Info</button>
+<a className="info_button" href={recipe&&recipe.url} target="_blank">More Info</a>
 
         <div key={recipe&&recipe.id} className="container">
 
